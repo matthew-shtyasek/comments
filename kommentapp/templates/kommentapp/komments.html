@@ -9,9 +9,10 @@
         </div>
     {% endfor %}   
     
-        <form method="post" class="border">
-            <input type="text" placeholder="Текст комментария">
-            <input type="submit" value="Добавить коммертарий">
+        <form method="post" class="border fixed-bottom">
+            {% csrf_token %}
+            {{ komment_form }}
+            <input type="submit" value="Добавить комментарий" class="btn btn-success">
         </form>
         
 {% endblock %}
