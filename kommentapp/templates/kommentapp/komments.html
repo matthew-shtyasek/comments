@@ -1,5 +1,12 @@
 {% for el in komments %}
-    <h4>Имя пользователя: {{ el.name }}</h4>
-    <p>{{ el.text }}</p>
-    <p>{{ el.date }}</p>
-{% endfor %}
+    <div>
+        <h4>Имя пользователя: {{ el.name }}</h4>
+        <p>{{ el.text }}</p>
+        <p>{{ el.date }}</p>
+    </div>
+{% endfor %}   
+
+    <form method="post">
+        <input type="text" placeholder="Текст комментария">
+        <input type="submit" value="Добавить коммертарий">
+    </form>
