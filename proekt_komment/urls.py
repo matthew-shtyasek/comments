@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from kommentapp.views import komments_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('komments/', komments_view)
 ]
