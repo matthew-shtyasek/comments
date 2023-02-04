@@ -1,12 +1,17 @@
-{% for el in komments %}
-    <div>
-        <h4>Имя пользователя: {{ el.name }}</h4>
-        <p>{{ el.text }}</p>
-        <p>{{ el.date }}</p>
-    </div>
-{% endfor %}   
+{% extends 'root.html' %}
+{% block content %}
 
-    <form method="post">
-        <input type="text" placeholder="Текст комментария">
-        <input type="submit" value="Добавить коммертарий">
-    </form>
+    {% for el in komments %}
+        <div>
+            <h4>Имя пользователя: {{ el.name }}</h4>
+            <p>{{ el.text }}</p>
+            <p>{{ el.date }}</p>
+        </div>
+    {% endfor %}   
+    
+        <form method="post" class="border">
+            <input type="text" placeholder="Текст комментария">
+            <input type="submit" value="Добавить коммертарий">
+        </form>
+        
+{% endblock %}
